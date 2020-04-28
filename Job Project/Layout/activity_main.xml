@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/ObjectView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Object View"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/textRelLayOut2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ObjectView"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/textPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="page" />
+
+        <TextView
+            android:id="@+id/textPerPage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/textPage"
+            android:text="per_page" />
+
+        <TextView
+            android:id="@+id/textTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/textPerPage"
+            android:text="total" />
+
+        <TextView
+            android:id="@+id/textTotalPages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/textTotal"
+            android:text="total_pages" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/recyclerViewRelLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_below="@+id/textRelLayOut2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewList"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recyclerViewRelLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Scroll up down to view more"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/textRelLayOut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <TextView
+            android:id="@+id/textCompanyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:text="Company Name" />
+
+        <TextView
+            android:id="@+id/textUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textCompanyName"
+            android:layout_marginTop="10dp"
+            android:text="URL"
+            android:textColor="@color/blue"/>
+
+        <TextView
+            android:id="@+id/textDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textUrl"
+            android:layout_marginTop="10dp"
+            android:text="Details" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
